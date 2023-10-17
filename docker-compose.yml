@@ -37,7 +37,7 @@ services:
     ports:
       - "4061:3306"
     volumes:
-      - data:/var/lib/mysql
+      - ${MYSQL_ROOT}/:/var/lib/mysql
     networks:
       - backend
     # The default MySQL installation only creates the "root" administrative account
